@@ -1,23 +1,13 @@
+{% extends "header.html" %}
 
-<!DOCTYPE html><!--Basic template for all other pages -->
-<html>
-<head><!--Replaceable title/heading -->
-    {% block head %}
-    <title> {% block title %} Title {% endblock %}  </title>
-    {% endblock %}
-</head>
-<body><!--Replaceable body -->
-
-    {% block content %}
-    content
-    {% endblock %}
-
-    {% block footer %}<!--Copyright stuff -->
+{% block content %}
+    Profile
     <br>
+    <b>Display name</b>: {{name}}
     <br>
+    <b>Age</b>: {{age}}
     <br>
-	  &copy; Copyright One Day 1-der
-	  {% endblock %}
-
-</body>
-</html>
+    <b>Personal Best</b>: {{score}}
+    <br>
+    <a href="/edit"><button>edit</button></a>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "shell.html" %}
+
+{% block nav %}
+    <form action="/logout"><!--Provides option to log out-->
+            <span>Logged in as {{user}}</span>
+            <button type="submit">Logout</button>
+    </form>
+{% endblock %}
